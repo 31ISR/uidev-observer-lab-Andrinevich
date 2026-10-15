@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" scroll-behavior="smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -142,5 +142,28 @@
             <p>&copy; 2025 Wired ISP. All rights reserved. Connecting you to the future.</p>
         </div>
     </footer>
+
+    <script>
+        (function createParticles() {
+            const particlesContainer = document.querySelector('.particles');
+            if (!particlesContainer) return;
+
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.classList.add('particle');
+                
+                // Случайная позиция по горизонтали
+                particle.style.left = Math.random() * 100 + '%';
+                // Случайная задержка старта анимации (от 0 до 15 секунд)
+                particle.style.animationDelay = (Math.random() * 15) + 's';
+                // Случайная длительность анимации (от 10 до 20 секунд)
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                
+                particlesContainer.appendChild(particle);
+            }
+        })();
+    </script>
+
+
 </body>
 </html>
