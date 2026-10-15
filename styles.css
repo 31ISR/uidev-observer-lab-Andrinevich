@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Глобальные настройки и плавность скролла */
 html {
     scroll-behavior: smooth;
 }
@@ -17,22 +16,19 @@ body {
     line-height: 1.6;
 }
 
-/* ==================== */
-/* Шаг 2: Состояния анимации (Классы-активаторы) */
-/* ==================== */
 
-/* Базовый класс для всех, кто едет снизу вверх */
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
+
 .animate-on-scroll.animate {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Слайды */
 .slide-left {
     opacity: 0;
     transform: translateX(-100px);
@@ -53,7 +49,6 @@ body {
     transform: translateX(0);
 }
 
-/* Масштабирование */
 .scale-up {
     opacity: 0;
     transform: scale(0.8);
@@ -64,7 +59,7 @@ body {
     transform: scale(1);
 }
 
-/* Простое проявление */
+
 .fade-in {
     opacity: 0;
     transition: opacity 1.2s ease-in;
@@ -73,7 +68,6 @@ body {
     opacity: 1;
 }
 
-/* Stagger (для JS, базовое состояние) */
 .stagger-item {
     opacity: 0;
     transform: translateY(30px);
@@ -84,9 +78,7 @@ body {
     transform: translateY(0);
 }
 
-/* ==================== */
-/* Header и Navigation */
-/* ==================== */
+
 header {
     position: fixed;
     top: 0;
@@ -143,7 +135,6 @@ nav {
     width: 100%;
 }
 
-/* НОВОЕ: Активный пункт меню (подсветка при скролле) */
 .nav-links a.active {
     color: #00d4ff;
 }
@@ -151,9 +142,6 @@ nav {
     width: 100%;
 }
 
-/* ==================== */
-/* Hero Section */
-/* ==================== */
 .hero {
     height: 100vh;
     display: flex;
@@ -164,7 +152,7 @@ nav {
     overflow: hidden;
 }
 
-/* Фоновые линии (из вашего исходного CSS) */
+
 .hero::before {
     content: '';
     position: absolute;
@@ -224,9 +212,7 @@ nav {
     box-shadow: 0 20px 40px rgba(0, 212, 255, 0.5);
 }
 
-/* ==================== */
-/* Sections */
-/* ==================== */
+
 section {
     padding: 5rem 2rem;
     max-width: 1200px;
@@ -243,9 +229,7 @@ section {
     background-clip: text;
 }
 
-/* ==================== */
-/* Services */
-/* ==================== */
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -309,9 +293,7 @@ section {
     margin-bottom: 1rem;
 }
 
-/* ==================== */
-/* Stats */
-/* ==================== */
+
 .stats {
     background: rgba(0, 212, 255, 0.1);
     border-radius: 20px;
@@ -343,9 +325,7 @@ section {
     opacity: 0.8;
 }
 
-/* ==================== */
-/* Testimonials */
-/* ==================== */
+
 .testimonials {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -383,9 +363,7 @@ section {
     color: #00d4ff;
 }
 
-/* ==================== */
-/* Contact Form */
-/* ==================== */
+
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -406,7 +384,6 @@ section {
     color: #00d4ff;
 }
 
-/* Исправлено: стили для темной темы и placeholder */
 .form-group input, 
 .form-group textarea {
     width: 100%;
@@ -418,7 +395,6 @@ section {
     font-size: 1rem;
 }
 
-/* Цвет подсказок (placeholder) в темной теме */
 ::placeholder {
     color: #888;
     opacity: 1;
@@ -431,9 +407,7 @@ section {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-/* ==================== */
-/* Footer */
-/* ==================== */
+
 footer {
     background: rgba(10, 10, 10, 0.9);
     padding: 3rem 2rem 1rem;
@@ -466,9 +440,7 @@ footer {
     color: #00d4ff;
 }
 
-/* ==================== */
-/* Mobile */
-/* ==================== */
+
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -487,9 +459,7 @@ footer {
     }
 }
 
-/* ==================== */
-/* Шаг 7.1: Полоска прогресса */
-/* ==================== */
+
 .scroll-indicator {
     position: fixed;
     top: 0;
@@ -507,9 +477,7 @@ footer {
     transition: width 0.1s ease;
 }
 
-/* ==================== */
-/* Шаг 7.4: Частицы (исправлено и дополнено) */
-/* ==================== */
+
 .particles {
     position: absolute;
     top: 0;
@@ -518,7 +486,7 @@ footer {
     height: 100%;
     pointer-events: none;
     z-index: 1;
-    overflow: hidden; /* НОВОЕ: обрезаем частицы, выходящие за пределы */
+    overflow: hidden;
 }
 
 .particle {
